@@ -28,8 +28,10 @@ He talks about it [in this tweet](https://twitter.com/karpathy/status/1723140519
 ### 1. Create a virtual environment
 
 ```shell
-python3 -m venv ~/.venvs/aienv
-source ~/.venvs/aienv/bin/activate
+mkdir /Users/username/llm_os_env
+cd llm_os_env
+conda create --prefix ./env python=3.11    # choose what python version
+conda activate ./env
 ```
 
 ### 2. Install libraries

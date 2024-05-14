@@ -1,9 +1,11 @@
-# LLM OS Fork
+# LLM OS
+## Personal Workspace Fork
 
-This cookbook contains an initial implementation of the LLM OS proposed by [karpathy](https://twitter.com/karpathy/status/1723140519554105733).
-He talks about it [in this tweet](https://twitter.com/karpathy/status/1723140519554105733), [this tweet](https://twitter.com/karpathy/status/1707437820045062561) and [this video](https://youtu.be/zjkBMFhNj_g?t=2535)
+This repository contains an initial implementation of the LLM OS proposed by [Karpathy](https://twitter.com/karpathy/status/1723140519554105733).
+He talks about it [in this tweet](https://twitter.com/karpathy/status/1723140519554105733), [this tweet](https://twitter.com/karpathy/status/1707437820045062561) and [this video](https://youtu.be/zjkBMFhNj_g?t=2535).
 
 ## The LLM OS philosophy
+![llm-os](https://github.com/martintmv-git/llm_os/assets/101264514/6a6e1ce0-68ac-4041-83f2-b35e742a76ad)
 
 - LLMs are the kernel process of an emerging operating system.
 - This process (LLM) will solve problems by coordinating other resources (like memory or computation tools).
@@ -28,21 +30,21 @@ He talks about it [in this tweet](https://twitter.com/karpathy/status/1723140519
 ### 1. Create a virtual environment
 
 ```shell
-mkdir /Users/username/llm_os_env
+mkdir llm_os_env
 cd llm_os_env
-conda create --prefix ./env python=3.11    # choose what python version
+conda create --prefix ./env python=3.11    # choose python version
 conda activate ./env
 ```
 
 ### 2. Install libraries
 
 ```shell
-pip install -r cookbook/llm_os/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 3. Export credentials
 
-- Out initial implementation uses GPT-4, so export your OpenAI API Key
+- Out initial implementation uses GPT-4o, so export your OpenAI API Key
 
 ```shell
 export OPENAI_API_KEY=***
@@ -62,7 +64,7 @@ Please install [docker desktop](https://docs.docker.com/desktop/install/mac-inst
 - Run using a helper script
 
 ```shell
-./cookbook/run_pgvector.sh
+./pgvector/run_pgvector.sh
 ```
 
 - OR run using the docker run command
@@ -82,13 +84,11 @@ docker run -d \
 ### 5. Run the LLM OS App
 
 ```shell
-streamlit run cookbook/llm_os/app.py
+streamlit run app.py
 ```
 
 - Open [localhost:8501](http://localhost:8501) to view your LLM OS.
 
-### 6. Message on [discord](https://discord.gg/4MtYHHrgA8) if you have any questions
+<hr>
 
-### 7. Star ⭐️ the project if you like it.
-
-### Share with your friends: https://git.new/llm-os
+#### Original repository 👉🏻 https://git.new/llm-os
